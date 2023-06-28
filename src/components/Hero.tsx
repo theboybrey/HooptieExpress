@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import  CustomButton  from "./CustomButton";
+
 const Hero = () => {
     const handleScroll = () => {
-
     }
 
   return (
@@ -21,9 +21,17 @@ const Hero = () => {
         {/* Custom Button */}
         <CustomButton 
         title="Explore Cars"
-        containerStyles='bg-primary-blue text-white rounded-full mt-10'
+        containerStyles="bg-primary-blue text-white mt-10 rounded-full"
         handleClick={handleScroll}
         />
+      </div>
+
+      {/* Hero Image */}
+      <div className="hero__image-container">
+        <div className="hero__image">
+            <Image src='/../public/hero.png' alt="hero" fill className="object-contain"/>
+            <div className="hero__image-overlay"></div>
+        </div>
       </div>
     </div>
   );
